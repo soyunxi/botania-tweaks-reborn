@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.yunxi.botania_tweaks.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "botania_tweaks.refmap.json",
+  "mixins": [
+    "ManaPoolBlockEntityMixin",
+    "ManaSparkEntityMixin",
+    "SparkHelperMixin",
+    "TerrestrialAgglomerationPlateBlockEntityMixin",
+    "TerrestrialAgglomerationPlateBlockMixin"
+  ],
+  "client": [
+    "client.BotaniaEffectPacketMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
