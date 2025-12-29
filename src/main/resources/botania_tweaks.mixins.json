@@ -5,8 +5,10 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "botania_tweaks.refmap.json",
   "mixins": [
+    "ForgeCommonInitializerMixin",
     "ManaPoolBlockEntityMixin",
     "ManaSparkEntityMixin",
+    "PowerGeneratorBlockEntityMixin",
     "SparkHelperMixin",
     "TerrestrialAgglomerationPlateBlockEntityMixin",
     "TerrestrialAgglomerationPlateBlockMixin"

@@ -155,6 +155,13 @@ repositories {
         name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/"
     }
+    maven {
+        name = "MixinExtras"
+        url = "https://maven.su5.eu/releases"
+    }
+    maven {
+        url "https://cursemaven.com"
+    }
 }
 
 dependencies {
@@ -185,12 +192,18 @@ dependencies {
     compileOnly fg.deobf("vazkii.botania:Botania:1.20.1-450-FORGE")
 
     // compile against the JEI API but do not include it at runtime
-    compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.20.0.100"))
+    compileOnly fg.deobf("mezz.jei:jei-1.20.1-common-api:15.2.0.27")
     // at runtime, use the full JEI jar for Forge
-    runtimeOnly(fg.deobf("mezz.jei:jei-1.20.1-forge:15.20.0.100"))
+    runtimeOnly fg.deobf("mezz.jei:jei-1.20.1-common-api:15.2.0.27")
     compileOnly fg.deobf("dev.emi:emi-forge:1.1.22+1.20.1:api")
     runtimeOnly fg.deobf("dev.emi:emi-forge:1.1.22+1.20.1")
+    implementation fg.deobf("curse.maven:re-avaritia-623969:7362367")
+    implementation fg.deobf("curse.maven:extended-crafting-268387:6880322")
 
+    compileOnly 'io.github.llamalad7:mixinextras-common:0.3.6'
+    implementation 'io.github.llamalad7:mixinextras-forge:0.3.6'
+    annotationProcessor 'io.github.llamalad7:mixinextras-common:0.3.6'
+    jarJar 'io.github.llamalad7:mixinextras-forge:[0.3.6]'
 
 }
 
